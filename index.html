@@ -4,64 +4,355 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vitrina Amazonas</title>
+  <meta name="description" content="Directorio digital de negocios en Puerto Ayacucho, Amazonas." />
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #0D0D0D;
-      color: white;
+      color: #F5F1EA;
+    }
+
+    header {
+      padding: 20px 16px 10px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(13, 13, 13, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(216, 195, 165, 0.12);
+    }
+
+    .brand {
+      font-size: 28px;
+      font-weight: 700;
+      color: #D8C3A5;
+      margin: 0 0 8px;
       text-align: center;
     }
 
-    h1 {
-      margin-top: 60px;
+    .subtitle {
+      text-align: center;
+      color: #cdbb9e;
+      font-size: 14px;
+      margin: 0 0 16px;
+    }
+
+    .search-wrap {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .search {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid #3F4A3C;
+      outline: none;
+      background: #171717;
+      color: #F5F1EA;
+      font-size: 15px;
+    }
+
+    .hero {
+      padding: 28px 16px 14px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 30px;
+      line-height: 1.15;
+      margin: 0 0 12px;
+      color: #F5F1EA;
+    }
+
+    .hero p {
+      margin: 0 auto 18px;
+      max-width: 680px;
+      color: #d7c6ab;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      transition: 0.25s ease;
+    }
+
+    .btn-primary {
+      background: #3F4A3C;
+      color: white;
+      border: 1px solid #3F4A3C;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      opacity: 0.95;
+    }
+
+    .btn-secondary {
+      background: transparent;
       color: #D8C3A5;
+      border: 1px solid rgba(216, 195, 165, 0.35);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(216, 195, 165, 0.06);
+    }
+
+    main {
+      padding: 8px 16px 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 20px;
+      color: #D8C3A5;
+      margin: 20px 0 14px;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-      padding: 20px;
+      gap: 14px;
     }
 
     .card {
-      background: #1a1a1a;
-      padding: 20px;
-      border-radius: 12px;
-      border: 1px solid #3F4A3C;
+      background: linear-gradient(180deg, #171717 0%, #131313 100%);
+      border: 1px solid rgba(63, 74, 60, 0.9);
+      padding: 16px;
+      border-radius: 18px;
+      transition: 0.25s ease;
+      min-height: 132px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 20px;
-      background: #3F4A3C;
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(216, 195, 165, 0.35);
+    }
+
+    .icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(216, 195, 165, 0.08);
+      color: #D8C3A5;
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      margin: 0 0 6px;
+      font-size: 16px;
+      color: #F5F1EA;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 13px;
+      color: #c8b89e;
+      line-height: 1.4;
+    }
+
+    .featured-box {
+      margin-top: 24px;
+      background: linear-gradient(180deg, rgba(216,195,165,0.08), rgba(216,195,165,0.03));
+      border: 1px solid rgba(216,195,165,0.18);
+      border-radius: 20px;
+      padding: 18px;
+    }
+
+    .featured-box h3 {
+      margin: 0 0 8px;
+      color: #D8C3A5;
+    }
+
+    .featured-box p {
+      margin: 0;
+      color: #e6dbc9;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    footer {
+      padding: 28px 16px 40px;
+      text-align: center;
+      color: #af9f88;
+      font-size: 13px;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    @media (min-width: 768px) {
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <h1>Vitrina Amazonas</h1>
-  <p>Directorio digital de Puerto Ayacucho</p>
+  <header>
+    <p class="brand">Vitrina Amazonas</p>
+    <p class="subtitle">Directorio digital de Puerto Ayacucho</p>
+    <div class="search-wrap">
+      <input
+        type="text"
+        id="searchInput"
+        class="search"
+        placeholder="Buscar categoría o negocio..."
+      />
+    </div>
+  </header>
 
-  <div class="grid">
-    <div class="card">Servicios Profesionales</div>
-    <div class="card">Moda</div>
-    <div class="card">Comida</div>
-    <div class="card">Postres</div>
-    <div class="card">Nails</div>
-    <div class="card">Delivery</div>
-    <div class="card">Eventos</div>
-    <div class="card">Repuestos</div>
-  </div>
+  <section class="hero">
+    <h1>Descubre negocios locales en un solo lugar</h1>
+    <p>
+      Explora categorías, encuentra servicios y conecta con comercios de Puerto Ayacucho
+      desde una vitrina digital moderna, rápida y fácil de usar.
+    </p>
 
-  <a class="btn" href="#">Quiero unirme</a>
+    <div class="hero-actions">
+      <a href="#categorias" class="btn btn-primary">Explorar categorías</a>
+      <a href="https://forms.gle/" target="_blank" class="btn btn-secondary">Quiero unirme a Vitrina Amazonas</a>
+    </div>
+  </section>
+
+  <main>
+    <h2 class="section-title" id="categorias">Categorías</h2>
+
+    <div class="grid" id="categoriesGrid">
+      <div class="card searchable" data-name="Servicios Profesionales Daniela Silva Abg Ana Nieves Fotografía Diseño Web Contenido RRSS">
+        <div class="icon">💼</div>
+        <div>
+          <h3>Servicios Profesionales</h3>
+          <p>Marketing, abogado, fotografía, diseño web y contenido RRSS.</p>
+        </div>
+      </div>
+
+      <div class="card searchable" data-name="Moda Tropica ropa mujer ropa hombre ropa niños zapatos">
+        <div class="icon">👗</div>
+        <div>
+          <h3>Moda</h3>
+          <p>Ropa de mujer, hombre, niños y zapatos.</p>
+        </div>
+      </div>
+
+      <div class="card searchable" data-name="Comida hamburguesas perros calientes almuerzos pizzas">
+        <div class="icon">🍔</div>
+        <div>
+          <h3>Comida</h3>
+          <p>Hamburguesas, perros calientes, almuerzos y pizzas.</p>
+        </div>
+      </div>
+
+      <div class="card searchable" data-name="Postres Dulcitos Ema caseros">
+        <div class="icon">🍰</div>
+        <div>
+          <h3>Postres</h3>
+          <p>Postres caseros y opciones dulces locales.</p>
+        </div>
+      </div>
+
+      <div class="card searchable" data-name="Nails Roxnails uñas belleza manos">
+        <div class="icon">✨</div>
+        <div>
+          <h3>Nails</h3>
+          <p>Servicios de uñas y belleza de manos.</p>
+        </div>
+      </div>
+
+      <div class="card searchable" data-name="Delivery Moto Bryan Bici Luis moto bici">
+        <div class="icon">🛵</div>
+        <div>
+          <h3>Delivery</h3>
+          <p>Opciones de entrega en moto y bicicleta.</p>
+        </div>
+      </div>
+
+      <div class="card searchable" data-name="Eventos Inflables Sanz fiestas inflables">
+        <div class="icon">🎉</div>
+        <div>
+          <h3>Eventos</h3>
+          <p>Inflables y servicios para celebraciones.</p>
+        </div>
+      </div>
+
+      <div class="card searchable" data-name="Repuestos moto carro bicicletas">
+        <div class="icon">🔧</div>
+        <div>
+          <h3>Repuestos</h3>
+          <p>Accesorios y repuestos para moto, carro y bicicletas.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="featured-box">
+      <h3>Más buscados esta semana</h3>
+      <p>
+        Daniela Silva, Tropica, Dulcitos Ema y Rox’nails aparecen aquí como sección destacada inicial.
+        Luego lo haremos dinámico.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    Vitrina Amazonas · Puerto Ayacucho · Directorio digital local
+  </footer>
+
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const cards = document.querySelectorAll(".searchable");
+
+    searchInput.addEventListener("input", function () {
+      const value = this.value.toLowerCase().trim();
+
+      cards.forEach((card) => {
+        const text = card.dataset.name.toLowerCase();
+        if (text.includes(value)) {
+          card.classList.remove("hidden");
+        } else {
+          card.classList.add("hidden");
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
