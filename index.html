@@ -3,17 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vitrina Amazonas</title>
-  <meta name="description" content="Directorio digital de negocios en Puerto Ayacucho, Amazonas." />
+  <title>VITRINA AMAZONAS</title>
+  <meta name="description" content="DIRECTORIO DIGITAL DE NEGOCIOS EN PUERTO AYACUCHO, AMAZONAS." />
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -24,6 +19,7 @@
 
     a {
       text-decoration: none;
+      color: inherit;
     }
 
     header {
@@ -47,7 +43,8 @@
       color: #D8C3A5;
       font-size: 26px;
       font-weight: 700;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
     }
 
     .search {
@@ -76,6 +73,7 @@
       font-size: 32px;
       line-height: 1.1;
       color: #F5F1EA;
+      text-transform: uppercase;
     }
 
     .hero p {
@@ -84,6 +82,7 @@
       color: #d5c5ab;
       font-size: 15px;
       line-height: 1.5;
+      text-transform: uppercase;
     }
 
     .hero-actions {
@@ -100,6 +99,7 @@
       font-size: 14px;
       font-weight: 700;
       transition: .25s ease;
+      text-transform: uppercase;
     }
 
     .btn-primary {
@@ -125,21 +125,15 @@
     }
 
     section {
-      margin-top: 28px;
+      margin-top: 30px;
     }
 
     .section-title {
       margin: 0 0 14px;
       color: #D8C3A5;
       font-size: 20px;
-      letter-spacing: 0.03em;
-    }
-
-    .section-subtitle {
-      margin: -4px 0 16px;
-      color: #bca98b;
-      font-size: 14px;
-      line-height: 1.4;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
     }
 
     .categories-grid {
@@ -178,35 +172,170 @@
       margin: 0;
       font-size: 14px;
       font-weight: 800;
-      color: #F5F1EA;
+      color: #D8C3A5;
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
-    .card-grid {
+    .subcat-block {
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 18px;
+      background: #141414;
+      border: 1px solid rgba(216, 195, 165, 0.10);
+    }
+
+    .subcat-title {
+      margin: 0 0 14px;
+      font-size: 18px;
+      color: #D8C3A5;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .subcat-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(216, 195, 165, 0.08);
+      border: 1px solid rgba(216, 195, 165, 0.15);
+      color: #D8C3A5;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .business-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 14px;
+      margin-top: 16px;
     }
 
-    .info-card {
+    .business-card {
       background: linear-gradient(180deg, #171717 0%, #111111 100%);
       border: 1px solid rgba(216, 195, 165, 0.12);
       border-radius: 18px;
       padding: 18px;
     }
 
-    .info-card h3 {
-      margin: 0 0 8px;
-      color: #F5F1EA;
-      font-size: 16px;
+    .business-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 10px;
     }
 
-    .info-card p {
+    .business-name {
       margin: 0;
+      font-size: 18px;
+      color: #D8C3A5;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .badge {
+      background: rgba(63, 74, 60, 0.35);
+      border: 1px solid rgba(63, 74, 60, 0.8);
+      color: #d9c8ae;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      white-space: nowrap;
+      text-transform: uppercase;
+    }
+
+    .meta {
+      color: #D8C3A5;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .business-card p {
+      margin: 0 0 14px;
       color: #ccb99a;
       font-size: 14px;
       line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    .business-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .mini-btn {
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      display: inline-block;
+      text-transform: uppercase;
+    }
+
+    .mini-btn.whatsapp {
+      background: #3F4A3C;
+      color: #fff;
+    }
+
+    .mini-btn.map {
+      background: transparent;
+      color: #D8C3A5;
+      border: 1px solid rgba(216, 195, 165, 0.25);
+    }
+
+    .scroll-row {
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .scroll-row::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .scroll-row::-webkit-scrollbar-thumb {
+      background: rgba(216, 195, 165, 0.20);
+      border-radius: 999px;
+    }
+
+    .scroll-card {
+      min-width: 280px;
+      max-width: 280px;
+      scroll-snap-align: start;
+      background: linear-gradient(180deg, #171717 0%, #111111 100%);
+      border: 1px solid rgba(216, 195, 165, 0.12);
+      border-radius: 18px;
+      padding: 18px;
+      flex-shrink: 0;
+    }
+
+    .scroll-card h3 {
+      margin: 0 0 8px;
+      color: #D8C3A5;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .scroll-card p {
+      margin: 0 0 14px;
+      color: #ccb99a;
+      font-size: 14px;
+      line-height: 1.5;
+      text-transform: uppercase;
     }
 
     .faq-list {
@@ -223,9 +352,10 @@
 
     summary {
       cursor: pointer;
-      color: #F5F1EA;
+      color: #D8C3A5;
       font-weight: 700;
       list-style: none;
+      text-transform: uppercase;
     }
 
     summary::-webkit-details-marker {
@@ -237,6 +367,7 @@
       color: #ccb99a;
       font-size: 14px;
       line-height: 1.5;
+      text-transform: uppercase;
     }
 
     .hidden {
@@ -248,26 +379,22 @@
       text-align: center;
       color: #a89577;
       font-size: 13px;
+      text-transform: uppercase;
     }
 
     @media (min-width: 768px) {
-      .hero h1 {
-        font-size: 46px;
-      }
-
-      .categories-grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
-
-      .card-grid {
-        grid-template-columns: repeat(3, 1fr);
+      .hero h1 { font-size: 46px; }
+      .categories-grid { grid-template-columns: repeat(4, 1fr); }
+      .business-grid { grid-template-columns: repeat(2, 1fr); }
+      .scroll-card {
+        min-width: 320px;
+        max-width: 320px;
       }
     }
   </style>
 </head>
 
 <body>
-
   <header>
     <div class="topbar">
       <p class="brand">VITRINA AMAZONAS</p>
@@ -275,7 +402,7 @@
         type="text"
         id="searchInput"
         class="search"
-        placeholder="Buscar categoría..."
+        placeholder="BUSCAR CATEGORÍA, SUBCATEGORÍA O NEGOCIO..."
       />
     </div>
   </header>
@@ -284,10 +411,9 @@
     <div class="hero-inner">
       <h1>EL DIRECTORIO DIGITAL DE PUERTO AYACUCHO</h1>
       <p>
-        Descubre comercios, servicios y oportunidades locales en una vitrina moderna,
-        visual y fácil de explorar desde tu celular.
+        DESCUBRE COMERCIOS, SERVICIOS Y OPORTUNIDADES LOCALES EN UNA VITRINA MODERNA,
+        VISUAL Y FÁCIL DE EXPLORAR DESDE TU CELULAR.
       </p>
-
       <div class="hero-actions">
         <a href="#categorias" class="btn btn-primary">EXPLORAR CATEGORÍAS</a>
         <a href="https://forms.gle/" target="_blank" class="btn btn-secondary">QUIERO UNIRME A VITRINA AMAZONAS</a>
@@ -298,160 +424,279 @@
   <main>
     <section id="categorias">
       <h2 class="section-title">CATEGORÍAS</h2>
-      <p class="section-subtitle">Selecciona una categoría principal para explorar negocios y subcategorías.</p>
-
-      <div class="categories-grid" id="categoriesGrid">
-        <a class="category-card searchable" data-name="servicios profesionales" href="#">
-          <div class="category-icon">💼</div>
-          <p class="category-name">SERVICIOS PROFESIONALES</p>
-        </a>
-
-        <a class="category-card searchable" data-name="moda" href="#">
-          <div class="category-icon">👗</div>
-          <p class="category-name">MODA</p>
-        </a>
-
-        <a class="category-card searchable" data-name="comida" href="#">
-          <div class="category-icon">🍔</div>
-          <p class="category-name">COMIDA</p>
-        </a>
-
-        <a class="category-card searchable" data-name="postres" href="#">
-          <div class="category-icon">🍰</div>
-          <p class="category-name">POSTRES</p>
-        </a>
-
-        <a class="category-card searchable" data-name="nails" href="#">
-          <div class="category-icon">✨</div>
-          <p class="category-name">NAILS</p>
-        </a>
-
-        <a class="category-card searchable" data-name="delivery" href="#">
-          <div class="category-icon">🛵</div>
-          <p class="category-name">DELIVERY</p>
-        </a>
-
-        <a class="category-card searchable" data-name="eventos" href="#">
-          <div class="category-icon">🎉</div>
-          <p class="category-name">EVENTOS</p>
-        </a>
-
-        <a class="category-card searchable" data-name="repuestos" href="#">
-          <div class="category-icon">🔧</div>
-          <p class="category-name">REPUESTOS</p>
-        </a>
+      <div class="categories-grid">
+        <div class="category-card"><div class="category-icon">💼</div><p class="category-name">SERVICIOS PROFESIONALES</p></div>
+        <div class="category-card"><div class="category-icon">👗</div><p class="category-name">MODA</p></div>
+        <div class="category-card"><div class="category-icon">🍔</div><p class="category-name">COMIDA</p></div>
+        <div class="category-card"><div class="category-icon">🍰</div><p class="category-name">POSTRES</p></div>
+        <div class="category-card"><div class="category-icon">✨</div><p class="category-name">NAILS</p></div>
+        <div class="category-card"><div class="category-icon">🛵</div><p class="category-name">DELIVERY</p></div>
+        <div class="category-card"><div class="category-icon">🎉</div><p class="category-name">EVENTOS</p></div>
+        <div class="category-card"><div class="category-icon">🔧</div><p class="category-name">REPUESTOS</p></div>
       </div>
     </section>
 
-    <section id="featured">
-      <h2 class="section-title">MOST SEARCHED THIS WEEK</h2>
-      <div class="card-grid">
-        <div class="info-card">
-          <h3>Daniela Silva</h3>
-          <p>Marketing y RRSS · Diseño Web · Estrategia digital.</p>
-        </div>
-        <div class="info-card">
-          <h3>Tropica</h3>
-          <p>Moda femenina con estilo local y propuestas frescas.</p>
-        </div>
-        <div class="info-card">
-          <h3>Rox'nails</h3>
-          <p>Servicio de uñas con enfoque visual, femenino y moderno.</p>
+    <section id="subcategorias">
+      <h2 class="section-title">SUBCATEGORÍAS</h2>
+
+      <div class="subcat-block searchable" data-name="servicios profesionales marketing rrss abogado fotografia diseño web contenido rrss daniela silva ana nieves">
+        <h3 class="subcat-title">SERVICIOS PROFESIONALES</h3>
+        <div class="subcat-tags">
+          <span class="tag">MARKETING Y RRSS</span>
+          <span class="tag">ABOGADO</span>
+          <span class="tag">FOTOGRAFÍA</span>
+          <span class="tag">DISEÑO WEB</span>
+          <span class="tag">CONTENIDO RRSS</span>
         </div>
       </div>
-    </section>
 
-    <section id="sponsors">
-      <h2 class="section-title">BUSINESS SPONSORS</h2>
-      <div class="card-grid">
-        <div class="info-card">
-          <h3>Espacio Sponsor 1</h3>
-          <p>Zona premium para marcas o negocios destacados dentro del directorio.</p>
-        </div>
-        <div class="info-card">
-          <h3>Espacio Sponsor 2</h3>
-          <p>Ideal para campañas visuales, lanzamientos y posicionamiento local.</p>
-        </div>
-        <div class="info-card">
-          <h3>Espacio Sponsor 3</h3>
-          <p>Promoción estratégica para negocios que desean mayor visibilidad.</p>
+      <div class="subcat-block searchable" data-name="moda ropa mujer ropa hombre ropa niños zapatos tropica">
+        <h3 class="subcat-title">MODA</h3>
+        <div class="subcat-tags">
+          <span class="tag">ROPA MUJER</span>
+          <span class="tag">ROPA HOMBRE</span>
+          <span class="tag">ROPA NIÑOS</span>
+          <span class="tag">ZAPATOS</span>
         </div>
       </div>
-    </section>
 
-    <section id="advertising">
-      <h2 class="section-title">ADVERTISING</h2>
-      <div class="card-grid">
-        <div class="info-card">
-          <h3>Banner Publicitario</h3>
-          <p>Espacio para promociones, lanzamientos, descuentos o campañas locales.</p>
+      <div class="subcat-block searchable" data-name="comida hamburguesas perros calientes almuerzos pizzas">
+        <h3 class="subcat-title">COMIDA</h3>
+        <div class="subcat-tags">
+          <span class="tag">HAMBURGUESAS</span>
+          <span class="tag">PERROS CALIENTES</span>
+          <span class="tag">ALMUERZOS</span>
+          <span class="tag">PIZZAS</span>
         </div>
-        <div class="info-card">
-          <h3>Promoción Especial</h3>
-          <p>Bloque editable para aliados comerciales y anuncios estratégicos.</p>
+      </div>
+
+      <div class="subcat-block searchable" data-name="postres caseros dulcitos ema">
+        <h3 class="subcat-title">POSTRES</h3>
+        <div class="subcat-tags">
+          <span class="tag">CASEROS</span>
         </div>
-        <div class="info-card">
-          <h3>Tu negocio aquí</h3>
-          <p>Activa tu presencia publicitaria dentro de Vitrina Amazonas.</p>
+      </div>
+
+      <div class="subcat-block searchable" data-name="nails uñas belleza manos roxnails">
+        <h3 class="subcat-title">NAILS</h3>
+        <div class="subcat-tags">
+          <span class="tag">UÑAS Y BELLEZA DE MANOS</span>
+        </div>
+      </div>
+
+      <div class="subcat-block searchable" data-name="delivery moto bici moto bryan bici luis">
+        <h3 class="subcat-title">DELIVERY</h3>
+        <div class="subcat-tags">
+          <span class="tag">MOTO DELIVERY</span>
+          <span class="tag">BICI DELIVERY</span>
+        </div>
+      </div>
+
+      <div class="subcat-block searchable" data-name="eventos inflables inflables sanz">
+        <h3 class="subcat-title">EVENTOS</h3>
+        <div class="subcat-tags">
+          <span class="tag">INFLABLES</span>
+        </div>
+      </div>
+
+      <div class="subcat-block searchable" data-name="repuestos moto carro bicicletas">
+        <h3 class="subcat-title">REPUESTOS</h3>
+        <div class="subcat-tags">
+          <span class="tag">MOTO</span>
+          <span class="tag">CARRO</span>
+          <span class="tag">BICICLETAS</span>
         </div>
       </div>
     </section>
 
-    <section id="news">
-      <h2 class="section-title">NEWS</h2>
-      <div class="card-grid">
-        <div class="info-card">
-          <h3>Novedades locales</h3>
-          <p>Contenido de entretenimiento, negocios y movimiento comercial de la ciudad.</p>
+    <section id="comercios">
+      <h2 class="section-title">COMERCIOS</h2>
+
+      <div class="business-grid">
+        <div class="business-card searchable" data-name="daniela silva servicios profesionales marketing rrss diseño web">
+          <div class="business-top">
+            <h3 class="business-name">DANIELA SILVA</h3>
+            <span class="badge">DESTACADO</span>
+          </div>
+          <div class="meta">SERVICIOS PROFESIONALES · MARKETING Y RRSS / DISEÑO WEB</div>
+          <p>ESTRATEGIA DIGITAL, FUNNELS, OPTIMIZACIÓN DE PERFILES Y PRESENCIA ONLINE.</p>
+          <div class="business-actions">
+            <a class="mini-btn whatsapp" href="https://wa.me/584120000000?text=HOLA%20VI%20TU%20PERFIL%20EN%20VITRINA%20AMAZONAS" target="_blank">WHATSAPP</a>
+            <a class="mini-btn map" href="https://maps.google.com/?q=Puerto+Ayacucho+Amazonas" target="_blank">UBICACIÓN</a>
+          </div>
         </div>
-        <div class="info-card">
-          <h3>Lo nuevo de la semana</h3>
-          <p>Espacio para noticias ligeras, tendencias y visibilidad local.</p>
+
+        <div class="business-card searchable" data-name="abg ana a nieves abogado servicios profesionales sponsor">
+          <div class="business-top">
+            <h3 class="business-name">ABG. ANA A. NIEVES</h3>
+            <span class="badge">ACTIVO</span>
+          </div>
+          <div class="meta">SERVICIOS PROFESIONALES · ABOGADO</div>
+          <p>ATENCIÓN LEGAL Y ACOMPAÑAMIENTO PROFESIONAL PARA CONSULTAS Y ASESORÍAS.</p>
+          <div class="business-actions">
+            <a class="mini-btn whatsapp" href="https://wa.me/584120000001?text=HOLA%20VI%20TU%20PERFIL%20EN%20VITRINA%20AMAZONAS" target="_blank">WHATSAPP</a>
+            <a class="mini-btn map" href="https://maps.google.com/?q=Puerto+Ayacucho+Amazonas" target="_blank">UBICACIÓN</a>
+          </div>
         </div>
-        <div class="info-card">
-          <h3>Comunidad y ciudad</h3>
-          <p>Historias, novedades y actualidad de Puerto Ayacucho.</p>
+
+        <div class="business-card searchable" data-name="tropica moda ropa mujer">
+          <div class="business-top">
+            <h3 class="business-name">TROPICA</h3>
+            <span class="badge">DESTACADO</span>
+          </div>
+          <div class="meta">MODA · ROPA MUJER</div>
+          <p>MODA FEMENINA CON ESTILO FRESCO, VISUAL Y PENSADO PARA DESTACAR.</p>
+          <div class="business-actions">
+            <a class="mini-btn whatsapp" href="https://wa.me/584120000002?text=HOLA%20VI%20TU%20PERFIL%20EN%20VITRINA%20AMAZONAS" target="_blank">WHATSAPP</a>
+            <a class="mini-btn map" href="https://maps.google.com/?q=Puerto+Ayacucho+Amazonas" target="_blank">UBICACIÓN</a>
+          </div>
+        </div>
+
+        <div class="business-card searchable" data-name="dulcitos ema postres caseros">
+          <div class="business-top">
+            <h3 class="business-name">DULCITOS EMA</h3>
+            <span class="badge">ACTIVO</span>
+          </div>
+          <div class="meta">POSTRES · CASEROS</div>
+          <p>POSTRES CASEROS Y PROPUESTAS DULCES PARA COMPARTIR O REGALAR.</p>
+          <div class="business-actions">
+            <a class="mini-btn whatsapp" href="https://wa.me/584120000003?text=HOLA%20VI%20TU%20PERFIL%20EN%20VITRINA%20AMAZONAS" target="_blank">WHATSAPP</a>
+            <a class="mini-btn map" href="https://maps.google.com/?q=Puerto+Ayacucho+Amazonas" target="_blank">UBICACIÓN</a>
+          </div>
+        </div>
+
+        <div class="business-card searchable" data-name="roxnails nails uñas belleza manos">
+          <div class="business-top">
+            <h3 class="business-name">ROX'NAILS</h3>
+            <span class="badge">DESTACADO</span>
+          </div>
+          <div class="meta">NAILS · UÑAS Y BELLEZA DE MANOS</div>
+          <p>SERVICIOS DE UÑAS CON ENFOQUE FEMENINO, VISUAL Y MODERNO.</p>
+          <div class="business-actions">
+            <a class="mini-btn whatsapp" href="https://wa.me/584120000004?text=HOLA%20VI%20TU%20PERFIL%20EN%20VITRINA%20AMAZONAS" target="_blank">WHATSAPP</a>
+            <a class="mini-btn map" href="https://maps.google.com/?q=Puerto+Ayacucho+Amazonas" target="_blank">UBICACIÓN</a>
+          </div>
+        </div>
+
+        <div class="business-card searchable" data-name="moto bryan delivery moto">
+          <div class="business-top">
+            <h3 class="business-name">MOTO BRYAN</h3>
+            <span class="badge">ACTIVO</span>
+          </div>
+          <div class="meta">DELIVERY · MOTO DELIVERY</div>
+          <p>SERVICIO RÁPIDO DE ENTREGAS Y TRASLADOS LOCALES EN MOTO.</p>
+          <div class="business-actions">
+            <a class="mini-btn whatsapp" href="https://wa.me/584120000005?text=HOLA%20VI%20TU%20PERFIL%20EN%20VITRINA%20AMAZONAS" target="_blank">WHATSAPP</a>
+            <a class="mini-btn map" href="https://maps.google.com/?q=Puerto+Ayacucho+Amazonas" target="_blank">UBICACIÓN</a>
+          </div>
+        </div>
+
+        <div class="business-card searchable" data-name="bici luis delivery bici">
+          <div class="business-top">
+            <h3 class="business-name">BICI LUIS</h3>
+            <span class="badge">ACTIVO</span>
+          </div>
+          <div class="meta">DELIVERY · BICI DELIVERY</div>
+          <p>OPCIONES DE REPARTO LOCAL EN BICICLETA PARA RECORRIDOS CORTOS.</p>
+          <div class="business-actions">
+            <a class="mini-btn whatsapp" href="https://wa.me/584120000006?text=HOLA%20VI%20TU%20PERFIL%20EN%20VITRINA%20AMAZONAS" target="_blank">WHATSAPP</a>
+            <a class="mini-btn map" href="https://maps.google.com/?q=Puerto+Ayacucho+Amazonas" target="_blank">UBICACIÓN</a>
+          </div>
+        </div>
+
+        <div class="business-card searchable" data-name="inflables sanz eventos inflables">
+          <div class="business-top">
+            <h3 class="business-name">INFLABLES SANZ</h3>
+            <span class="badge">ACTIVO</span>
+          </div>
+          <div class="meta">EVENTOS · INFLABLES</div>
+          <p>ALQUILER DE INFLABLES PARA CELEBRACIONES, EVENTOS Y REUNIONES.</p>
+          <div class="business-actions">
+            <a class="mini-btn whatsapp" href="https://wa.me/584120000007?text=HOLA%20VI%20TU%20PERFIL%20EN%20VITRINA%20AMAZONAS" target="_blank">WHATSAPP</a>
+            <a class="mini-btn map" href="https://maps.google.com/?q=Puerto+Ayacucho+Amazonas" target="_blank">UBICACIÓN</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="vip">
-      <h2 class="section-title">VIP FOUNDERS CLUB</h2>
-      <div class="info-card">
-        <h3>Beneficios para los primeros aliados</h3>
-        <p>
-          Acceso temprano, mayor visibilidad, insignia de fundador, prioridad en publicidad
-          y presencia destacada dentro de la plataforma.
-        </p>
+    <section id="patrocinadores">
+      <h2 class="section-title">PATROCINADORES</h2>
+      <div class="scroll-row">
+        <div class="scroll-card">
+          <h3>ABG. ANA A. NIEVES</h3>
+          <p>ASESORÍA LEGAL Y ACOMPAÑAMIENTO PROFESIONAL PARA PERSONAS Y NEGOCIOS.</p>
+          <a class="mini-btn whatsapp" href="https://wa.me/584120000001?text=HOLA%20VI%20TU%20ANUNCIO%20EN%20VITRINA%20AMAZONAS" target="_blank">CONTACTAR</a>
+        </div>
+
+        <div class="scroll-card">
+          <h3>DANIELA SILVA</h3>
+          <p>ESTRATEGIA DIGITAL, OPTIMIZACIÓN Y VISIBILIDAD ONLINE PARA EMPRENDEDORAS.</p>
+          <a class="mini-btn whatsapp" href="https://wa.me/584120000000?text=HOLA%20VI%20TU%20ANUNCIO%20EN%20VITRINA%20AMAZONAS" target="_blank">CONTACTAR</a>
+        </div>
+
+        <div class="scroll-card">
+          <h3>TROPICA</h3>
+          <p>MODA FEMENINA CON PROPUESTAS VISUALES Y ESTILO LOCAL DESTACADO.</p>
+          <a class="mini-btn whatsapp" href="https://wa.me/584120000002?text=HOLA%20VI%20TU%20ANUNCIO%20EN%20VITRINA%20AMAZONAS" target="_blank">CONTACTAR</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="publicidad">
+      <h2 class="section-title">PUBLICIDAD</h2>
+      <div class="scroll-row">
+        <div class="scroll-card">
+          <h3>ESPACIO PUBLICITARIO 1</h3>
+          <p>PROMOCIONA TU NEGOCIO, TU LANZAMIENTO O TU SERVICIO EN ESTA VITRINA DIGITAL.</p>
+          <a class="mini-btn map" href="#" target="_blank">VER ESPACIO</a>
+        </div>
+
+        <div class="scroll-card">
+          <h3>ESPACIO PUBLICITARIO 2</h3>
+          <p>IDEAL PARA OFERTAS, DESCUENTOS, CAMPAÑAS DE TEMPORADA O PROMOCIONES LOCALES.</p>
+          <a class="mini-btn map" href="#" target="_blank">VER ESPACIO</a>
+        </div>
+
+        <div class="scroll-card">
+          <h3>TU NEGOCIO AQUÍ</h3>
+          <p>ACTIVA TU VISIBILIDAD DENTRO DE VITRINA AMAZONAS CON UN BLOQUE DESTACADO.</p>
+          <a class="mini-btn map" href="#" target="_blank">SOLICITAR</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="mas-buscados">
+      <h2 class="section-title">MÁS BUSCADOS DE LA SEMANA</h2>
+      <div class="scroll-row">
+        <div class="scroll-card">
+          <h3>DANIELA SILVA</h3>
+          <p>MARKETING Y RRSS · DISEÑO WEB · ESTRATEGIA DIGITAL.</p>
+        </div>
+        <div class="scroll-card">
+          <h3>TROPICA</h3>
+          <p>MODA FEMENINA CON ESTILO LOCAL Y PROPUESTAS FRESCAS.</p>
+        </div>
+        <div class="scroll-card">
+          <h3>ROX'NAILS</h3>
+          <p>SERVICIO DE UÑAS CON ENFOQUE VISUAL, FEMENINO Y MODERNO.</p>
+        </div>
       </div>
     </section>
 
     <section id="faq">
-      <h2 class="section-title">FAQ</h2>
+      <h2 class="section-title">PREGUNTAS FRECUENTES</h2>
       <div class="faq-list">
         <details>
           <summary>¿QUIÉNES SOMOS?</summary>
-          <p>Somos una vitrina digital creada para dar visibilidad a negocios y servicios de Puerto Ayacucho.</p>
+          <p>SOMOS UNA VITRINA DIGITAL CREADA PARA DAR VISIBILIDAD A NEGOCIOS Y SERVICIOS DE PUERTO AYACUCHO.</p>
         </details>
-
         <details>
           <summary>¿CUÁNTO CUESTA APARECER?</summary>
-          <p>Habrá espacios gratuitos de lanzamiento y luego planes según visibilidad, publicidad y beneficios.</p>
+          <p>HABRÁ ESPACIOS GRATUITOS DE LANZAMIENTO Y LUEGO PLANES SEGÚN VISIBILIDAD, PUBLICIDAD Y BENEFICIOS.</p>
         </details>
-
-        <details>
-          <summary>¿QUÉ ES VIP FOUNDERS CLUB?</summary>
-          <p>Es el grupo inicial de negocios aliados con beneficios especiales de lanzamiento y mayor exposición.</p>
-        </details>
-
-        <details>
-          <summary>¿CÓMO FUNCIONA LA PUBLICIDAD?</summary>
-          <p>Tu negocio puede aparecer en banners, secciones destacadas o espacios patrocinados dentro del directorio.</p>
-        </details>
-
         <details>
           <summary>¿QUÉ NECESITO PARA UNIRME?</summary>
-          <p>Nombre del negocio, categoría, descripción, contacto, ubicación y al menos 5 fotos.</p>
+          <p>NOMBRE DEL NEGOCIO, CATEGORÍA, DESCRIPCIÓN, CONTACTO, UBICACIÓN Y AL MENOS 5 FOTOS.</p>
         </details>
       </div>
     </section>
@@ -463,21 +708,20 @@
 
   <script>
     const searchInput = document.getElementById("searchInput");
-    const cards = document.querySelectorAll(".searchable");
+    const searchableItems = document.querySelectorAll(".searchable");
 
     searchInput.addEventListener("input", function () {
       const value = this.value.toLowerCase().trim();
 
-      cards.forEach((card) => {
-        const text = card.dataset.name.toLowerCase();
+      searchableItems.forEach((item) => {
+        const text = item.dataset.name.toLowerCase();
         if (text.includes(value)) {
-          card.classList.remove("hidden");
+          item.classList.remove("hidden");
         } else {
-          card.classList.add("hidden");
+          item.classList.add("hidden");
         }
       });
     });
   </script>
-
 </body>
 </html>
